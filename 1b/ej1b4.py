@@ -65,9 +65,20 @@ Exemple:
 import numpy as np
 
 def results(list_numbers):
+    avg = np.mean(list_numbers)
+    std_dev = np.std(list_numbers)
+    
+    avg_rounded = round (avg, 2)
+    std_dev_rounded = round (std_dev, 2)
+    
+    print(f"Average: {avg_rounded}")
+    print(f"Standard deviation: {std_dev_rounded}")
+    
+    return avg_rounded, std_dev_rounded
+
     # Write here your code
-    pass
+    # pass
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-# results([1, 2, 10, -5, 0, 9.55, 74.825, 55, 8, 42])
+results([1, 2, 10, -5, 0, 9.55, 74.825, 55, 8, 42])
